@@ -9,20 +9,19 @@ class Document extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'custom_id'; // Set custom_id as the primary key
-    public $incrementing = false; // Set to false since custom_id is not an integer
-    protected $keyType = 'string'; // Specify that the primary key is a string
+    protected $primaryKey = 'custom_id';
+    public $incrementing = false;
+    protected $keyType = 'string';
 
     protected $fillable = [
         'custom_id',
-        'subject',
         'date',
+        'subject',
         'sender',
-        'addressed_to',
-        'transferred_to',
-        'attached_documents_count',
+        'addresse',
         'person_name_position',
         'notes',
         'document_path',
     ];
+    
 }

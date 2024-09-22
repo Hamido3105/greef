@@ -12,15 +12,14 @@ class DocumentsImport implements ToModel, WithHeadingRow
     {
         return new Document([
             'custom_id' => $row['custom_id'], // Ensure the heading matches the Excel column
-            'subject' => $row['subject'],
             'date' => $row['date'],
+            'subject' => $row['subject'],
             'sender' => $row['sender'],
-            'addressed_to' => $row['addressed_to'],
-            'transferred_to' => $row['transferred_to'],
-            'attached_documents_count' => $row['attached_documents_count'],
+            'addresse' => $row['addresse'],
             'person_name_position' => $row['person_name_position'],
             'notes' => $row['notes'],
             'document_path' => $row['document_path'], // This might need to be adjusted based on your Excel structure
         ]);
+        
     }
 }

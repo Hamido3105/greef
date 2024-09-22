@@ -13,14 +13,12 @@ return new class extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->string('custom_id')->primary(); // Custom ID (e.g., 2024/001)
-            $table->string('subject');
             $table->date('date');
-            $table->string('sender');
-            $table->string('addressed_to');
-            $table->string('transferred_to')->nullable();
-            $table->integer('attached_documents_count')->nullable();
-            $table->string('person_name_position')->nullable();
-            $table->text('notes')->nullable();
+            $table->string('subject');
+            $table->string('sender'); // المرسل اليه
+            $table->string('addresse'); // العنوان
+            $table->string('person_name_position')->nullable(); // انتقال
+            $table->text('notes')->nullable();  // ملاحظات
             $table->string('document_path');
             $table->timestamps();
         });

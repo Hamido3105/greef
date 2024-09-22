@@ -23,8 +23,7 @@ Route::get('documents/{custom_id}/edit', [DocumentController::class, 'edit'])
 Route::put('documents/{custom_id}', [DocumentController::class, 'update'])
     ->where('custom_id', '[0-9]{4}-[0-9]{3}')->name('documents.update');
 
-Route::delete('documents/{custom_id}', [DocumentController::class, 'destroy'])
-    ->where('custom_id', '[0-9]{4}-[0-9]{3}')->name('documents.destroy');
+
 
 Route::get('documents/export', function () {
     return (new DocumentsExport)->export();
